@@ -6,3 +6,13 @@ provider "aws" {
 resource "aws_s3_bucket" "my_bucket" {
   bucket  = "igs-with-terraform12345"
 }
+
+# Creating new IAM user
+resource "aws_iam_user" "test" {
+  name = "new-user1"
+  path = "/system/"
+
+  tags = {
+    tag-key = "igs-ishwarya"
+  }
+}

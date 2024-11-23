@@ -1,4 +1,4 @@
-name: 's3 bucket creation'
+name: 'AWS resource management'
 on:
   workflow_dispatch:
 permissions:
@@ -31,8 +31,8 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.Ishwarya_key }}
       run: terraform plan
 
-    - name: Terraform Destroy Ish
+    - name: Terraform Apply Ish
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.Ishwarya_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.Ishwarya_key }}
-      run: terraform destroy -auto-approve
+      run: terraform apply -auto-approve
