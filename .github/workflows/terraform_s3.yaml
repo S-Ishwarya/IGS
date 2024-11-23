@@ -18,8 +18,8 @@ jobs:
 
     - name: Terraform Initialize
       env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.Ishwarya.ID}}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.Ishwarya.key }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.Ishwarya_ID}}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.Ishwarya_key }}
       run: terraform init
 
     - name: Terraform Validate
@@ -27,12 +27,12 @@ jobs:
 
     - name: Terraform Plan
       env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.Ishwarya.ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.Ishwarya.key }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.Ishwarya_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.Ishwarya_key }}
       run: terraform plan
 
     - name: Terraform Apply
       env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.Ishwarya.ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.Ishwarya.key }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.Ishwarya_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.Ishwarya_key }}
       run: terraform apply -auto-approve
