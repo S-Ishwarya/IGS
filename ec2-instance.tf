@@ -5,7 +5,7 @@ module "ec2_instance" {
   name = "Test-Instance"
 
   instance_type          = "t2.micro"
-  key_name               = "testkey2.ppk"
+  key_name               = "testkey2"
  
 
   tags = {
